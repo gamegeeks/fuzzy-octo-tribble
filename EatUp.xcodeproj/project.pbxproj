@@ -15,6 +15,7 @@
 		7CEFCD651A84440C00B9CD95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CEFCD631A84440C00B9CD95 /* LaunchScreen.xib */; };
 		7CEFCD711A84440C00B9CD95 /* EatUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCD701A84440C00B9CD95 /* EatUpTests.swift */; };
 		7CEFCD7B1A84450C00B9CD95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEFCD7A1A84450C00B9CD95 /* MapKit.framework */; };
+		7CEFCD7D1A8446EF00B9CD95 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEFCD7C1A8446EF00B9CD95 /* DraggableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		7CEFCD6F1A84440C00B9CD95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CEFCD701A84440C00B9CD95 /* EatUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatUpTests.swift; sourceTree = "<group>"; };
 		7CEFCD7A1A84450C00B9CD95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7CEFCD7C1A8446EF00B9CD95 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				7CEFCD571A84440C00B9CD95 /* AppDelegate.swift */,
 				7CEFCD5C1A84440C00B9CD95 /* ViewController.swift */,
+				7CEFCD7C1A8446EF00B9CD95 /* DraggableView.swift */,
 				7CEFCD5E1A84440C00B9CD95 /* Main.storyboard */,
 				7CEFCD611A84440C00B9CD95 /* Images.xcassets */,
 				7CEFCD631A84440C00B9CD95 /* LaunchScreen.xib */,
@@ -226,6 +229,7 @@
 			files = (
 				7CEFCD5D1A84440C00B9CD95 /* ViewController.swift in Sources */,
 				7CEFCD581A84440C00B9CD95 /* AppDelegate.swift in Sources */,
+				7CEFCD7D1A8446EF00B9CD95 /* DraggableView.swift in Sources */,
 				7CEFCD5B1A84440C00B9CD95 /* EatUp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
