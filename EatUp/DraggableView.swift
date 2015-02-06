@@ -16,8 +16,16 @@ class DraggableView : UIView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "dragged")
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "dragged:")
+        panGestureRecognizer.delegate = self
         addGestureRecognizer(panGestureRecognizer)
+        
+        loadImageAndStyle()
+        
+        self.overlayView = OverlayView(frame: self.bounds)
+        self.overlayView.alpha = 0
+        addSubview(self.overlayView)
+        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -28,10 +36,7 @@ class DraggableView : UIView{
         removeGestureRecognizer(panGestureRecognizer)
     }
     
-}
-
-extension DraggableView{
-    func dragged(gestureRecognizer:UIPanGestureRecognizer){
+    @IBAction func dragged(gestureRecognizer:UIPanGestureRecognizer){
         let xDistance = gestureRecognizer.translationInView(self).x
         let yDistance = gestureRecognizer.translationInView(self).y
         switch(gestureRecognizer.state){
@@ -49,9 +54,27 @@ extension DraggableView{
             updateOverlay(xDistance)
         case .Ended:
             resetViewPositionsAndTransformations()
-
+            
         default: break
         }
+    }
+    
+}
+
+extension DraggableView : UIGestureRecognizerDelegate{
+    
+}
+
+extension DraggableView{
+    
+    
+    func loadImageAndStyle(){
+        let imageView :UIImageView = UIImageView(image: UIImage(named: "bar"))
+        addSubview(imageView)
+        layer.cornerRadius = 8
+        layer.shadowOffset = CGSizeMake(7,7)
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.5
     }
     
     func updateOverlay(distance:CGFloat){
